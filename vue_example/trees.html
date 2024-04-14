@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue--Trees</title>
+</head>
+
+<body>
+    <h1>Trees of Texas</h1>
+    <div id="app">
+        <div v-if="showTrees">
+            <!--<p>{{cname}} - {{lname}} - {{number}}</p>-->
+            <ul>
+                <li v-for="tree in trees">
+                    <p>{{tree.cname}} - {{tree.lname}} - {{tree.number}}</p>
+                </li>
+            </ul>
+            <button v-on:click=number++>Increase Quantity</button>
+            <button v-on:click=number-->Decrease Quantity</button>
+            <div @click=changeCname>Change common name</div>
+        </div>
+        <button @click="toggleTrees"><span v-if="showTrees">Hide Trees</span><span v-if=!showTrees>Show Trees</span></button>
+    </div>
+    <script src='app.js'></script>
+</body>
+
+</html>
